@@ -12,13 +12,13 @@ This lab highlights the critical distinction between network-based intrusion det
 
 * **Sysmon** is an endpoint security tool that runs on the host itself. Its logs provide a deep look into what is happening on the machine. Sysmon's logs were crucial for detecting the post-exploitation activity, specifically the creation of a suspicious file, the `eicar.com` test virus.
 
-These tools are not interchangeable; they are complementary. A complete security posture requires both NIDS for network-level threats and host-based tools for endpoint-level visibility to correlate events and tell a full story of an attack.
+These tools are not interchangeable, they are complementary. A complete security posture requires both NIDS for network-level threats and host-based tools for endpoint-level visibility to correlate events and tell a full story of an attack.
 
 ## 2. Incident Report
 
 ### What Happened?
 
-An attacker, using the Kali Linux machine (IP: `[Attacker_IP]`), initiated a series of malicious activities against the Ubuntu server (IP: `[Ubuntu_IP]`) and the Windows endpoint (IP: `[Windows_IP]`). The attack began with a reconnaissance phase, specifically a ping sweep (ICMP) and an `Nmap` port scan, and escalated to a brute-force attack targeting the SSH service. The attacker was also able to successfully download a simulated malicious file to the Windows endpoint.
+An attacker, using the Kali Linux machine (IP: `[Attacker_IP]`), initiated a series of malicious activities against the Ubuntu server (IP: `10.40.43.99`) and the Windows endpoint (IP: `10.40.43.116`). The attack began with a reconnaissance phase, specifically a ping sweep (ICMP) and an `Nmap` port scan, and escalated to a brute-force attack targeting the SSH service. The attacker was also able to successfully download a simulated malicious file to the Windows endpoint.
 
 ### How Was it Detected?
 
