@@ -1,4 +1,4 @@
-# Incident Response & Threat Hunting Lab
+# Network Security Monitoring Lab
 
 ### Deliverables
 
@@ -66,7 +66,7 @@ alert ssh any any -> $HOME_NET any (msg:"SSH Brute Force Attempt"; flow:to_serve
 
 **Suricata JSON Alert with Attacker IP:**
 
-```
+```json
 {
   "timestamp": "2025-08-20T15:00:15.543210+0000",
   "event_type": "alert",
@@ -124,7 +124,6 @@ alert ssh any any -> $HOME_NET any (msg:"SSH Brute Force Attempt"; flow:to_serve
     "severity": 2
   }
 }
-
 ```
 
 ### Sysmon Event Logs
@@ -152,7 +151,7 @@ TargetFilename: C:\Users\Administrator\Downloads\eicar.com
 CreationUtcTime: 2025-08-20 13:31:14.870
 User: MYDOMAIN\Administrator
 Event Xml:
-<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+<Event xmlns="[http://schemas.microsoft.com/win/2004/08/events/event](http://schemas.microsoft.com/win/2004/08/events/event)">
   <System>
     <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
     <EventID>11</EventID>
@@ -180,5 +179,3 @@ Event Xml:
     <Data Name="User">MYDOMAIN\Administrator</Data>
   </EventData>
 </Event>
-
-```
